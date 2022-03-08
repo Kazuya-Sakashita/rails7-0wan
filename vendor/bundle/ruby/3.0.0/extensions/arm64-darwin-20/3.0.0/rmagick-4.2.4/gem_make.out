@@ -1,0 +1,131 @@
+current directory: /Users/sakashitakazuya/Desktop/work/Portfolio/rails7-0wan/vendor/bundle/ruby/3.0.0/gems/rmagick-4.2.4/ext/RMagick
+/Users/sakashitakazuya/.rbenv/versions/3.0.1/bin/ruby -I /Users/sakashitakazuya/.rbenv/versions/3.0.1/lib/ruby/site_ruby/3.0.0 -r ./siteconf20220308-2394-8cpiqj.rb extconf.rb
+checking for brew... yes
+checking for Ruby version >= 2.3.0... yes
+checking for pkg-config... yes
+checking for outdated ImageMagick version (<= 6.7.7)... no
+checking for clang... yes
+checking for __GNUC__... yes
+checking for MagickCore/MagickCore.h... yes
+checking for rb_gc_adjust_memory_usage() in assert.h,ctype.h,stdio.h,stdlib.h,math.h,time.h,sys/types.h,MagickCore/MagickCore.h... yes
+checking for posix_memalign() in assert.h,ctype.h,stdio.h,stdlib.h,math.h,time.h,sys/types.h,MagickCore/MagickCore.h... yes
+checking for malloc_usable_size() in assert.h,ctype.h,stdio.h,stdlib.h,math.h,time.h,sys/types.h,MagickCore/MagickCore.h... no
+checking for malloc_size() in assert.h,ctype.h,stdio.h,stdlib.h,math.h,time.h,sys/types.h,MagickCore/MagickCore.h... yes
+checking for _aligned_msize() in assert.h,ctype.h,stdio.h,stdlib.h,math.h,time.h,sys/types.h,MagickCore/MagickCore.h... no
+checking for GetImageChannelEntropy() in assert.h,ctype.h,stdio.h,stdlib.h,math.h,time.h,sys/types.h,MagickCore/MagickCore.h... no
+checking for SetImageGray() in assert.h,ctype.h,stdio.h,stdlib.h,math.h,time.h,sys/types.h,MagickCore/MagickCore.h... yes
+checking for SetMagickAlignedMemoryMethods() in assert.h,ctype.h,stdio.h,stdlib.h,math.h,time.h,sys/types.h,MagickCore/MagickCore.h... yes
+checking for malloc.h... no
+checking for malloc/malloc.h... yes
+creating extconf.h
+creating Makefile
+======================================================================
+Tue 08 Mar 22 12:12:49
+This installation of RMagick 4.2.4 is configured for
+Ruby 3.0.1 (arm64-darwin20) and ImageMagick 7.1.0
+======================================================================
+
+
+Configured compile options: {:magick_version=>"7.1.0", :local_libs=>" -L/opt/homebrew/Cellar/imagemagick/7.1.0-26/lib -lMagickCore-7.Q16HDRI", :cppflags=>"-I/opt/homebrew/opt/mysql@5.7/include -Xpreprocessor -fopenmp -DMAGICKCORE_HDRI_ENABLE=1 -DMAGICKCORE_QUANTUM_DEPTH=16 -I/opt/homebrew/Cellar/imagemagick/7.1.0-26/include/ImageMagick-7 -std=gnu99", :ldflags=>"-L/opt/homebrew/opt/mysql@5.7/lib -L/opt/homebrew/Cellar/imagemagick/7.1.0-26/lib -lMagickCore-7.Q16HDRI", :defs=>[], :config_h=>"Makefile"}
+
+current directory: /Users/sakashitakazuya/Desktop/work/Portfolio/rails7-0wan/vendor/bundle/ruby/3.0.0/gems/rmagick-4.2.4/ext/RMagick
+make DESTDIR\= clean
+
+current directory: /Users/sakashitakazuya/Desktop/work/Portfolio/rails7-0wan/vendor/bundle/ruby/3.0.0/gems/rmagick-4.2.4/ext/RMagick
+make DESTDIR\=
+compiling rmagick.c
+compiling rmdraw.c
+compiling rmenum.c
+compiling rmfill.c
+compiling rmilist.c
+compiling rmimage.c
+rmimage.c:3032:34: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'unsigned int' [-Wshorten-64-to-32]
+    IMPLEMENT_ATTR_READER(Image, colors, ulong);
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+./rmagick.h:453:44: note: expanded from macro 'IMPLEMENT_ATTR_READER'
+        return C_##type##_to_R_##type(ptr->attr);\
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+./rmagick.h:439:43: note: expanded from macro 'C_ulong_to_R_ulong'
+#define C_ulong_to_R_ulong(attr) UINT2NUM(attr) /**< C unsigned long -> Ruby unsigned long */
+                                 ~~~~~~~~ ^~~~
+rmimage.c:4983:34: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'unsigned int' [-Wshorten-64-to-32]
+    IMPLEMENT_ATTR_READER(Image, delay, ulong);
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+./rmagick.h:453:44: note: expanded from macro 'IMPLEMENT_ATTR_READER'
+        return C_##type##_to_R_##type(ptr->attr);\
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+./rmagick.h:439:43: note: expanded from macro 'C_ulong_to_R_ulong'
+#define C_ulong_to_R_ulong(attr) UINT2NUM(attr) /**< C unsigned long -> Ruby unsigned long */
+                                 ~~~~~~~~ ^~~~
+rmimage.c:9676:34: warning: implicit conversion loses integer precision: 'ssize_t' (aka 'long') to 'int' [-Wshorten-64-to-32]
+    IMPLEMENT_ATTR_READER(Image, offset, long);
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+./rmagick.h:453:44: note: expanded from macro 'IMPLEMENT_ATTR_READER'
+        return C_##type##_to_R_##type(ptr->attr);\
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+./rmagick.h:437:40: note: expanded from macro 'C_long_to_R_long'
+#define C_long_to_R_long(attr) INT2NUM(attr) /**< C long -> Ruby long */
+                               ~~~~~~~ ^~~~
+rmimage.c:10529:34: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'unsigned int' [-Wshorten-64-to-32]
+    IMPLEMENT_ATTR_READER(Image, quality, ulong);
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+./rmagick.h:453:44: note: expanded from macro 'IMPLEMENT_ATTR_READER'
+        return C_##type##_to_R_##type(ptr->attr);\
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+./rmagick.h:439:43: note: expanded from macro 'C_ulong_to_R_ulong'
+#define C_ulong_to_R_ulong(attr) UINT2NUM(attr) /**< C unsigned long -> Ruby unsigned long */
+                                 ~~~~~~~~ ^~~~
+rmimage.c:12082:34: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'unsigned int' [-Wshorten-64-to-32]
+    IMPLEMENT_ATTR_READER(Image, scene, ulong);
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+./rmagick.h:453:44: note: expanded from macro 'IMPLEMENT_ATTR_READER'
+        return C_##type##_to_R_##type(ptr->attr);\
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+./rmagick.h:439:43: note: expanded from macro 'C_ulong_to_R_ulong'
+#define C_ulong_to_R_ulong(attr) UINT2NUM(attr) /**< C unsigned long -> Ruby unsigned long */
+                                 ~~~~~~~~ ^~~~
+5 warnings generated.
+compiling rminfo.c
+rminfo.c:1614:33: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'unsigned int' [-Wshorten-64-to-32]
+    IMPLEMENT_ATTR_READER(Info, number_scenes, ulong);
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+./rmagick.h:453:44: note: expanded from macro 'IMPLEMENT_ATTR_READER'
+        return C_##type##_to_R_##type(ptr->attr);\
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+./rmagick.h:439:43: note: expanded from macro 'C_ulong_to_R_ulong'
+#define C_ulong_to_R_ulong(attr) UINT2NUM(attr) /**< C unsigned long -> Ruby unsigned long */
+                                 ~~~~~~~~ ^~~~
+rminfo.c:1807:33: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'unsigned int' [-Wshorten-64-to-32]
+    IMPLEMENT_ATTR_READER(Info, quality, ulong);
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+./rmagick.h:453:44: note: expanded from macro 'IMPLEMENT_ATTR_READER'
+        return C_##type##_to_R_##type(ptr->attr);\
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+./rmagick.h:439:43: note: expanded from macro 'C_ulong_to_R_ulong'
+#define C_ulong_to_R_ulong(attr) UINT2NUM(attr) /**< C unsigned long -> Ruby unsigned long */
+                                 ~~~~~~~~ ^~~~
+2 warnings generated.
+compiling rmkinfo.c
+compiling rmmain.c
+compiling rmmontage.c
+compiling rmpixel.c
+compiling rmstruct.c
+rmstruct.c:675:29: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'unsigned int' [-Wshorten-64-to-32]
+    width  = UINT2NUM(rect->width);
+             ~~~~~~~~ ~~~~~~^~~~~
+rmstruct.c:676:29: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'unsigned int' [-Wshorten-64-to-32]
+    height = UINT2NUM(rect->height);
+             ~~~~~~~~ ~~~~~~^~~~~~
+rmstruct.c:677:28: warning: implicit conversion loses integer precision: 'ssize_t' (aka 'long') to 'int' [-Wshorten-64-to-32]
+    x      = INT2NUM(rect->x);
+             ~~~~~~~ ~~~~~~^
+rmstruct.c:678:28: warning: implicit conversion loses integer precision: 'ssize_t' (aka 'long') to 'int' [-Wshorten-64-to-32]
+    y      = INT2NUM(rect->y);
+             ~~~~~~~ ~~~~~~^
+4 warnings generated.
+compiling rmutil.c
+linking shared-object RMagick2.bundle
+
+current directory: /Users/sakashitakazuya/Desktop/work/Portfolio/rails7-0wan/vendor/bundle/ruby/3.0.0/gems/rmagick-4.2.4/ext/RMagick
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 RMagick2.bundle ./.gem.20220308-2394-9075aw

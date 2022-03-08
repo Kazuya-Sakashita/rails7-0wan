@@ -12,6 +12,7 @@
 
   <body>
   <ul>
+    <li><%= link_to 'HOME', root_path %></li>
     <% if current_user %>
       <li><%= current_user.email %>さん</li>
       <li><%= link_to 'アカウント編集', edit_user_registration_path %></li>

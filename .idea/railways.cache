@@ -1,5 +1,5 @@
                                   Prefix Verb   URI Pattern                                                                                       Controller#Action
-                                    root GET    /                                                                                                 home#index
+                                    root GET    /                                                                                                 pets#index
                         new_user_session GET    /users/sign_in(.:format)                                                                          devise/sessions#new
                             user_session POST   /users/sign_in(.:format)                                                                          devise/sessions#create
                     destroy_user_session DELETE /users/sign_out(.:format)                                                                         devise/sessions#destroy
@@ -15,6 +15,15 @@
                                          PUT    /users(.:format)                                                                                  devise/registrations#update
                                          DELETE /users(.:format)                                                                                  devise/registrations#destroy
                                          POST   /users(.:format)                                                                                  devise/registrations#create
+                          users_sign_out GET    /users/sign_out(.:format)                                                                         devise/sessions#destroy
+                                    pets GET    /pets(.:format)                                                                                   pets#index
+                                         POST   /pets(.:format)                                                                                   pets#create
+                                 new_pet GET    /pets/new(.:format)                                                                               pets#new
+                                edit_pet GET    /pets/:id/edit(.:format)                                                                          pets#edit
+                                     pet GET    /pets/:id(.:format)                                                                               pets#show
+                                         PATCH  /pets/:id(.:format)                                                                               pets#update
+                                         PUT    /pets/:id(.:format)                                                                               pets#update
+                                         DELETE /pets/:id(.:format)                                                                               pets#destroy
         turbo_recede_historical_location GET    /recede_historical_location(.:format)                                                             turbo/native/navigation#recede
         turbo_resume_historical_location GET    /resume_historical_location(.:format)                                                             turbo/native/navigation#resume
        turbo_refresh_historical_location GET    /refresh_historical_location(.:format)                                                            turbo/native/navigation#refresh
